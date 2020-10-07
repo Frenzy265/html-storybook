@@ -11,6 +11,10 @@
   display: flex;
   font-size: 0.6rem;
   flex-direction: column;
+  color: #d9519d;
+  justify-content: center;
+}
+
+.inactive {
   color: #63666e;
-  justify-content: space-evenly;
 }
