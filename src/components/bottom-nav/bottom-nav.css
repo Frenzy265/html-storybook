@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  background-color: #151827;
+  width: 100vw;
+  height: 67px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-box {
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  color: #63666e;
+  justify-content: space-evenly;
+}
