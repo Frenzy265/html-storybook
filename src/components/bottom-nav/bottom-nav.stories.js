@@ -3,4 +3,4 @@ import bottomNav from "./bottom-nav.html";
 
 export default { title: "Components/Bottom-Nav" };
 
-export const buttonnav = () => bottomNav;
+export const bottomnav = () => bottomNav;

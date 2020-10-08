@@ -3,7 +3,7 @@
   justify-content: space-evenly;
   background-color: #151827;
   width: 100vw;
-  height: 67px;
+  min-height: 56px;
   align-items: center;
   box-shadow: 0 -0.2rem 4px #00000040;
 }
