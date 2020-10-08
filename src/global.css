@@ -1,4 +1,11 @@
-@import url("/assets/fonts/circular-std.css");
+@import url("./assets/fonts/circular-std.css");
+
+:root {
+  --main-font-color: #ffffff;
+  --active-color: #d9519d;
+  --list-item-size: 14px;
+  --main-bg-color: #383b49;
+}
 
 *,
 *::after,
@@ -9,7 +16,8 @@
 html {
   font-size: 16px;
   background-color: #383b49;
-  color: #fff;
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
 }
 
 body {
