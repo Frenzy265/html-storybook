@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #151827;
+  width: 100vw;
+  height: 67px;
+  align-items: center;
+  box-shadow: 0 -0.2rem 4px #00000040;
+}
+
+.nav-box {
+  max-width: 80%;
+  display: flex;
+  font-size: 0.6rem;
+  flex-direction: column;
+  color: #d9519d;
+  justify-content: center;
+}
+
+.nav-box > img {
+  padding-bottom: 5px;
+}
+
+.inactive {
+  color: #63666e;
+  filter: grayscale(100%);
+}
