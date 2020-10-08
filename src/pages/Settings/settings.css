@@ -1,0 +1,11 @@
+@import url(../../components/bottom-nav/bottom-nav.css);
+
+.app-layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+.header {
+  min-height: 56px;
+}
