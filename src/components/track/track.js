@@ -1,4 +1,3 @@
-import imageMichaelJackson from "../../assets/michaeljackson-icon.png";
 import playAction from "../../assets/playAction.svg";
 import "./track.css";
 
@@ -13,34 +12,41 @@ import "./track.css";
 </div>
 */
 
-export function createTrackElement(title, artist) {
+export function createTrackElement(track) {
   const trackLine = document.createElement("div");
   trackLine.className = "track";
 
-  const musicText = document.createElement("div");
-  musicText.className = "textbox";
+  const imgElement = document.createElement("img");
+  imgElement.src = track.imgSrc;
+  imgElement.alt = `Image of ${track.artist}`;
+  imgElement.className = "track__image";
 
   const titleElement = document.createElement("h3");
-  titleElement.innerText = title;
+  titleElement.innerText = track.title;
 
   const artistElement = document.createElement("p");
-  artistElement.innerText = artist;
+  artistElement.innerText = track.artist;
 
-  const imgElement = document.createElement("img");
-  imgElement.src = imageMichaelJackson;
-  imgElement.alt = `Image of ${artist}`;
+  const musicText = document.createElement("div");
+  musicText.className = "textbox";
 
   const buttonElement = document.createElement("button");
   buttonElement.className = "btn__play";
   const playActionElement = document.createElement("img");
   playActionElement.src = playAction;
   playActionElement.alt = "Image of Play Button";
+
+  const audioElement = new Audio(track.audioSrc);
   buttonElement.onclick = function () {
-    alert("Click!");
+    audioElement.play();
   };
 
+  const ruleElement = document.createElement("div");
+  ruleElement.className = "rule";
+  ruleElement.append(musicText, buttonElement);
+
   musicText.append(titleElement, artistElement);
-  trackLine.append(imgElement, musicText, buttonElement);
+  trackLine.append(imgElement, ruleElement);
   buttonElement.append(playActionElement);
 
   return trackLine;
