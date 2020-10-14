@@ -1,16 +1,6 @@
 import playAction from "../../assets/playAction.svg";
+import pauseBtn from "../../assets/icon-pause-gradient.svg";
 import "./track.css";
-
-/* <div class="track">
-        <div>
-            <h3>Billy Jean</h3>
-            <p>Michael Jackson</p>
-        </div>
-    <button>
-        <img>playButton</img>
-    </button>
-</div>
-*/
 
 export function createTrackElement(track) {
   const trackLine = document.createElement("div");
@@ -35,10 +25,22 @@ export function createTrackElement(track) {
   const playActionElement = document.createElement("img");
   playActionElement.src = playAction;
   playActionElement.alt = "Image of Play Button";
+  buttonElement.append(playActionElement);
+
+  let isPlaying = false;
 
   const audioElement = new Audio(track.audioSrc);
   buttonElement.onclick = function () {
-    audioElement.play();
+    if (isPlaying) {
+      // isPlaying = false;
+      audioElement.pause();
+      showActionBtn(playActionElement);
+    } else {
+      // isPlaying = true;
+      audioElement.play();
+      showPauseBtn(playActionElement);
+    }
+    isPlaying = !isPlaying;
   };
 
   const ruleElement = document.createElement("div");
@@ -47,7 +49,16 @@ export function createTrackElement(track) {
 
   musicText.append(titleElement, artistElement);
   trackLine.append(imgElement, ruleElement);
-  buttonElement.append(playActionElement);
 
   return trackLine;
 }
+
+const showActionBtn = (element) => {
+  element.src = playAction;
+  element.alt = "Play Button";
+};
+
+const showPauseBtn = (element) => {
+  element.src = pauseBtn;
+  element.alt = "Pause Button";
+};
