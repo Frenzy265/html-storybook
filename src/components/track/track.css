@@ -1,0 +1,43 @@
+.track {
+  display: flex;
+  align-items: center;
+  background-color: #181b2c;
+  padding: 10px;
+  width: 100vw;
+}
+
+.track > :not(:last-child) {
+  margin-right: 10px;
+}
+
+.btn__play {
+  background: none;
+  border: none;
+}
+
+.textbox > h3 {
+  margin: 0 0 3px 0;
+  color: var(--title-font-color);
+  font-size: 0.8rem;
+}
+
+.textbox > p {
+  margin: 2px 0 15px 0;
+  color: var(--foot-note-font-color);
+  font-size: 0.6rem;
+}
+
+.track__image {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ffffff57;
+}
+
+.rule {
+  border-bottom: 1px solid var(--foot-note-font-color);
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
